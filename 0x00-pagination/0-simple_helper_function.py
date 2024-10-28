@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-function named index_range that calculates the start and end indexes for a specific page and page size.
+function named index_range that calculates the start
+and end indexes for a specific page and page size.
 """
 
 
