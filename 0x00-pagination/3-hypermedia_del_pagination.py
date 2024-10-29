@@ -49,17 +49,17 @@ class Server:
             Dict: Pagination data with specified starting index.
         """
 
-    assert index is not None and 0 <= index < len(self.indexed_dataset())
+        assert index is not None and \
+            0 <= index < len(self.indexed_dataset())
 
-    dataset = self.indexed_dataset()
-    data = []
-    current_index = index
+        dataset = self.indexed_dataset()
+        data = []
+        current_index = index
 
-    while len(data) < page_size and \
-            current_index < len(dataset):
-        if current_index in dataset:
-            data.append(dataset[current_index])
-        current_index += 1
+        while len(data) < page_size and current_index < len(dataset):
+            if current_index in dataset:
+                data.append(dataset[current_index])
+            current_index += 1
 
         next_index = current_index if \
             current_index < len(dataset) else None
