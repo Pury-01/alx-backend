@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ g.get('lang', 'en') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask App with Babel</title>
+</head>
+<body>
+    <h1>{{ _('Hello World') }}</h1>
+    <p>
+        {% if g.user %}
+            {{ _('You are logged in as %(username)s.', username=g.user['name']) }}
+        {% else %}
+            {{ _('You are not logged in.') }}
+        {% endif %}
+    </p>
+</body>
+</html>
+
