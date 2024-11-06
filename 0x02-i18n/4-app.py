@@ -13,9 +13,9 @@ class Config:
     """
     configures available languages, default locale and timezone
     """
-    LANGUAGES: list[str] = ["en", "fr"]
-    BABEL_DEFAULT_LOCALE: str = "en"
-    BABEL_DEFAULT_TIMEZONE: str = "UTC"
+    LANGUAGES = ["en", "fr"]
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
 app.config.from_object(Config)
@@ -38,7 +38,7 @@ def get_locale() -> str:
 
 
 @app.route('/')
-def index() -> Response:
+def index():
     """single route to the template
     """
     return render_template('4-index.html')
