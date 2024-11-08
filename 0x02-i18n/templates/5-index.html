@@ -2,10 +2,10 @@
 <html lang="{{ g.get('lang', 'en') }}">
 <head>
     <meta charset="UTF-8">
-    <title>Flask App with Babel</title>
+    <title>Welcome to Holberton</title>
 </head>
 <body>
-    <h1>{{ _('Hello World') }}</h1>
+    <h1>{{ _('Hello world!') }}</h1>
     <p>
         {% if g.user %}
             {{ _('You are logged in as %(username)s.', username=g.user['name']) }}
